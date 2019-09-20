@@ -1,0 +1,12 @@
+{% extends "base" %}
+
+{% block content %}
+<h1>Create an url</h1>
+{% if id != "" %}
+    {% set url = "/" ~ id %}
+    <a href={{url}} target="__blank">Open one time link<a>
+{% endif %}
+<form method="post">
+    <input type="text" name="url" id="url" placeholder="insert url" />
+</form>
+{% endblock content %} 
